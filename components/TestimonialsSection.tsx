@@ -65,8 +65,11 @@ export default function TestimonialsSection() {
         className="absolute inset-0 bg-linear-to-b from-primary-pale/40 via-white to-primary-pale/30"
         aria-hidden
       />
-      <div className="absolute top-1/4 -left-32 w-64 h-64 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute bottom-1/4 -right-32 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden />
+      {/* Blue overlays – top left, middle, bottom left */}
+      <div className="absolute -top-20 -left-32 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary-light/8 blur-[80px] pointer-events-none" aria-hidden />
+      <div className="absolute -bottom-20 -left-32 w-72 h-72 rounded-full bg-primary-pale/40 blur-3xl pointer-events-none" aria-hidden />
+      <div className="absolute top-1/4 -right-32 w-64 h-64 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto container-wide">
         <div className="text-center mb-10 sm:mb-16">

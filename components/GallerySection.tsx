@@ -87,8 +87,11 @@ export default function GallerySection() {
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" aria-hidden />
+      {/* Blue overlays – top left, middle, bottom left */}
+      <div className="absolute -top-24 -left-32 w-80 h-80 rounded-full bg-primary/15 blur-3xl pointer-events-none" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full bg-primary-light/10 blur-[100px] pointer-events-none" aria-hidden />
+      <div className="absolute -bottom-24 -left-32 w-72 h-72 rounded-full bg-primary-dark/15 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute top-1/4 -right-40 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute bottom-1/4 -left-40 w-72 h-72 rounded-full bg-primary-light/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto z-10">
         <h2 id="gallery-heading" className="section-title text-center text-white mb-6 sm:mb-8 md:mb-10">
