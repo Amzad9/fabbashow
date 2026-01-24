@@ -33,7 +33,7 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
             className={`flex items-center gap-2 min-w-[44px] min-h-[44px] -m-2 p-2 rounded-lg ${focusClass}`}
             aria-label="The fABBA Show – home"
           >
-            <div className="relative w-20 h-20 sm:w-12 sm:h-12 shrink-0">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0">
               <Image
                 src={LOGO_SRC}
                 alt=""

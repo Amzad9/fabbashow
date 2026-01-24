@@ -18,9 +18,9 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="relative z-30 h-screen w-full min-h-[400px] sm:min-h-[480px] overflow-hidden"
+      className="relative z-30 h-screen w-full min-h-[420px] sm:min-h-[480px] md:min-h-[520px] overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 bg-primary">
+      <div className="absolute inset-0 z-0 bg-primary overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
@@ -38,20 +38,16 @@ export default function Hero() {
       </div>
 
       <div
-        className="absolute inset-y-0 left-0 w-1/2 z-1 bg-linear-to-r from-black/90 via-black/98 to-transparent"
+        className="absolute inset-0 z-1 bg-linear-to-tr from-black/90 via-black/50 to-transparent"
         aria-hidden
       />
 
-      <div className="relative z-10 h-full flex items-center section-padding-x">
+      <div className="relative z-10 h-full flex items-end  pb-20 md:items-end sm:items-center section-padding-x">
         <div className="container mx-auto text-left">
-          <div className="max-w-4xl space-y-6 sm:space-y-8 animate-fade-in">
-            <div className="inline-block">
-              <span className="text-amber-500 text-base sm:text-lg md:text-xl font-semibold tracking-wider">
-                Introducing
-              </span>
-            </div>
+          <div className="max-w-4xl space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
+          
 
-            <h1 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="section-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               <span className="block">The Fabba show</span>
               <span className="block mt-1 sm:mt-2 bg-linear-to-r from-amber-500 via-amber-100 to-amber-500 bg-clip-text text-transparent">
                 experience Abba
@@ -59,12 +55,12 @@ export default function Hero() {
               <span className="block mt-1 sm:mt-2">like never before!</span>
             </h1>
 
-            <p className="section-lead max-w-xl text-white/90 text-base sm:text-lg md:text-xl">
+            <p className="section-lead max-w-xl text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
               Step into a time machine and witness abba live in their prime with the fabba show, the sensational stage
               production that&apos;s taking audiences by storm all across the united states!
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 pt-1 sm:pt-4">
               <a
                 href="#events"
                 className="focus-accent group relative bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] hover:scale-105 transition-all duration-300 overflow-hidden text-center min-h-[48px] flex items-center justify-center"
@@ -82,7 +78,7 @@ export default function Hero() {
 
             <a
               href="#events"
-              className="focus-accent absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all text-white duration-300"
+              className="focus-accent absolute bottom-4 sm:bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all text-white duration-300 min-w-[44px] min-h-[44px]"
               aria-label="Scroll to events"
             >
               <svg className="w-6 h-6 text-gray-100 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>

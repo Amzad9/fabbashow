@@ -85,37 +85,39 @@ export default function ClientSection() {
   return (
     <section
       id="partners"
-      className="relative z-40 scroll-mt-24 pt-16 pb-16 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
+      className="relative z-40 scroll-mt-20 sm:scroll-mt-24 pt-14 sm:pt-16 pb-14 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
     >
       <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto">
-        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative">
+        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
 
-          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 md:gap-8 lg:gap-10">
             {PARTNERS.map(({ name, logo }) => (
               <PartnerLogo key={name} name={name} logo={logo} />
             ))}
           </div>
-          <div className="relative flex flex-col sm:flex-row items-center gap-2 sm:gap-4 shrink-0">
-            <div className="flex items-center gap-0.5" role="img" aria-label="5 out of 5 stars">
+          <div className="relative flex flex-col sm:flex-col items-center gap-2 sm:gap-4 shrink-0">
+         
+            <div className="text-center sm:text-left flex">
+              <p className="text-lg sm:text-xl font-bold text-black">4.9/5</p>
+              <div className="flex items-center gap-0.5" role="img" aria-label="5 out of 5 stars">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <div className="text-center sm:text-left">
-              <p className="text-lg sm:text-xl font-bold text-black">4.9/5</p>
-              <p className="text-xs sm:text-sm text-gray-500">Average Review Rating</p>
             </div>
+            <p className="text-xs sm:text-sm text-gray-500">Average Review Rating</p>
+
           </div>
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-12 rounded-2xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-4 sm:p-6 md:p-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {FEATURES.map(({ title, description, icon }) => (
               <article
                 key={title}

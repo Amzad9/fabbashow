@@ -75,7 +75,7 @@ export default function EventsSection() {
     <section
       id="events"
       aria-labelledby="events-heading"
-      className="scroll-mt-24 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-16 sm:pb-24 md:pb-80 overflow-hidden relative z-20 section-padding-x"
+      className="scroll-mt-20 sm:scroll-mt-24 pt-14 sm:pt-20 md:pt-24 lg:pt-28 pb-16 sm:pb-24 md:pb-80 overflow-hidden relative z-20 section-padding-x"
     >
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
@@ -190,13 +190,13 @@ export default function EventsSection() {
 
         <div className="mt-10 sm:mt-16 relative">
           <div className="flex flex-col md:flex-row items-center justify-center p-4 sm:p-8">
-            <div className="md:w-full text-center">
+            <div className="w-full md:w-auto text-center">
               <button
                 type="button"
                 aria-label="Get notified when new shows are announced"
-                className={`inline-flex items-center justify-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors rounded-lg px-3 py-2.5 min-h-[44px] ${focusClass}`}
+                className={`inline-flex flex-wrap items-center justify-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors rounded-lg px-3 py-2.5 min-h-[44px] text-sm sm:text-base max-w-full ${focusClass}`}
               >
-                Get notified when new shows are announced
+                <span>Get notified when new shows are announced</span>
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                 </svg>

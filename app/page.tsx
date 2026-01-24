@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-background overflow-visible">
+    <div className="min-h-screen w-full bg-background overflow-x-hidden">
       <Nav isScrolled={isScrolled} />
       <main id="main-content" tabIndex={-1}>
         <Hero />
