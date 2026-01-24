@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 
 const LOGO_SRC = 'https://thefabbashow.com/imgs/logos/logo.png';
@@ -18,6 +19,20 @@ const focusClass = 'focus-accent';
 
 export default function Nav({ isScrolled }: { isScrolled: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [menuOpen]);
 
   return (
     <nav
@@ -84,43 +99,50 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
         </div>
       </div>
 
-      {/* Backdrop – mobile only */}
-      <div
-        aria-hidden
-        onClick={() => setMenuOpen(false)}
-        className={`md:hidden fixed inset-0 top-0 left-0 right-0 bottom-0 bg-black/50 z-40 transition-opacity duration-300 ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-      />
-
-      {/* Right-side drawer – mobile only */}
-      <div
-        id="nav-menu"
-        aria-hidden={!menuOpen}
-        className={`md:hidden fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-black/95 backdrop-blur-md shadow-2xl z-50 flex flex-col pt-20 pb-8 px-4 transition-transform duration-300 ease-out ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="flex flex-col gap-1">
-          {NAV_LINKS.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
+      {mounted &&
+        createPortal(
+          <>
+            {/* Backdrop – mobile only, full viewport */}
+            <div
+              aria-hidden
               onClick={() => setMenuOpen(false)}
-              className={`text-white hover:text-amber-400 hover:bg-white/10 transition-colors font-medium px-4 py-3 rounded-lg min-h-[44px] flex items-center ${focusClass}`}
+              className={`md:hidden fixed inset-0 w-full min-h-svh bg-black/60 transition-opacity duration-300 ${
+                menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+              }`}
+              style={{ zIndex: 9998 }}
+            />
+            {/* Right-side drawer – mobile only, full height */}
+            <div
+              id="nav-menu"
+              aria-hidden={!menuOpen}
+              className={`md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-black shadow-2xl flex flex-col pt-20 pb-8 px-4 transition-transform duration-300 ease-out ${
+                menuOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
+              style={{ zIndex: 9999 }}
             >
-              {label}
-            </a>
-          ))}
-          <a
-            href="#events"
-            onClick={() => setMenuOpen(false)}
-            className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-4 py-3 rounded-full font-semibold mt-2 min-h-[44px] flex items-center justify-center hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all ${focusClass}`}
-          >
-            Book Tickets
-          </a>
-        </div>
-      </div>
+              <div className="flex flex-col gap-1 flex-1 min-h-0 overflow-y-auto">
+                {NAV_LINKS.map(({ label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`text-white hover:text-amber-400 hover:bg-white/10 transition-colors font-medium px-4 py-3 rounded-lg min-h-[44px] flex items-center ${focusClass}`}
+                  >
+                    {label}
+                  </a>
+                ))}
+                <a
+                  href="#events"
+                  onClick={() => setMenuOpen(false)}
+                  className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-4 py-3 rounded-full font-semibold mt-2 min-h-[44px] flex items-center justify-center hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all ${focusClass}`}
+                >
+                  Book Tickets
+                </a>
+              </div>
+            </div>
+          </>,
+          document.body
+        )}
     </nav>
   );
 }
