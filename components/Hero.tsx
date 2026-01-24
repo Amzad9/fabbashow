@@ -33,8 +33,8 @@ export default function Hero() {
         >
           <source src="/1275-145116912_small.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black/70" />
-        <div className="absolute inset-0 bg-linear-to-r from-primary/30 to-transparent" />
+        {/* <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/10 to-black/10" />
+        <div className="absolute inset-0 bg-linear-to-r from-primary/20 to-transparent" /> */}
       </div>
 
       <div
