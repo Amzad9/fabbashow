@@ -25,7 +25,7 @@ function PartnerLogo({ name, logo }: { name: string; logo: string }) {
 
 const PARTNERS = [
   { name: 'Ticketmaster', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-swtvpQ825Twr9l3lOcItRvkzCWppWgbDvQ&s' },
-  { name: 'Broadway World', logo: 'https://play-lh.googleusercontent.com/edz4NK9AK9rExSfbs_V3vdzCG2zQ6YTsv9AM8MQINmcRnMJpSqwLRIZN6gQ-DzSDuf8=w600-h300-pc0xffffff-pd' },
+  // { name: 'Broadway World', logo: 'https://play-lh.googleusercontent.com/edz4NK9AK9rExSfbs_V3vdzCG2zQ6YTsv9AM8MQINmcRnMJpSqwLRIZN6gQ-DzSDuf8=w600-h300-pc0xffffff-pd' },
   { name: 'The New York Times', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png' },
   { name: 'VOGUE', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/VOGUE_LOGO.svg' },
 ];
@@ -85,13 +85,13 @@ export default function ClientSection() {
   return (
     <section
       id="partners"
-      className="relative z-40 scroll-mt-24 pt-0 pb-16 sm:pb-20 md:pb-24 -mt-[5vh] overflow-hidden section-padding-x"
+      className="relative z-40 scroll-mt-24 pt-16 pb-16 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
     >
       <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto">
-        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative">
+        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative">
           <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
 
           <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-10">
