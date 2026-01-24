@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 
-const focusRing =
-  'focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white';
+const focusClass = 'focus-accent';
 
 const SLIDES = [
   { src: 'https://thefabbashow.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fl77qopcp%2Fproduction%2F34954395c5b1e2f3449cdd731e45ae17c2523a53-1578x984.jpg%3Fw%3D1200&w=1200&q=75', alt: 'Concert crowd and stage' },
@@ -83,15 +82,16 @@ export default function GallerySection() {
     <section
       id="gallery"
       aria-labelledby="gallery-heading"
-      className="scroll-mt-24 relative py-12 sm:py-16 md:py-20 overflow-hidden px-4 sm:px-6"
+      className="scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
     >
-      <div className="absolute inset-0 bg-linear-to-b from-primary-dark via-primary to-primary-dark" aria-hidden />
+      <div className="absolute inset-0 bg-surface-dark" aria-hidden />
+      <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" aria-hidden />
       <div className="absolute top-1/4 -right-40 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute bottom-1/4 -left-40 w-72 h-72 rounded-full bg-primary-light/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto z-10">
-        <h2 id="gallery-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold text-gray-200 mb-6 sm:mb-8 tracking-tight">
+        <h2 id="gallery-heading" className="section-title text-center text-white mb-6 sm:mb-8 md:mb-10">
           Gallery
         </h2>
 
@@ -101,7 +101,7 @@ export default function GallerySection() {
           aria-roledescription="carousel"
           aria-label="Gallery slideshow"
           tabIndex={0}
-          className="relative rounded-2xl overflow-hidden bg-white shadow-2xl outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+          className={`relative rounded-2xl overflow-hidden bg-white shadow-2xl outline-none ${focusClass}`}
         >
           <div
             className="relative w-full overflow-hidden bg-white"
@@ -157,7 +157,7 @@ export default function GallerySection() {
             <button
               type="button"
               onClick={prev}
-              className={`absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusRing}`}
+              className={`absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusClass}`}
               aria-label="Previous slide"
             >
               <ChevronLeft />
@@ -165,7 +165,7 @@ export default function GallerySection() {
             <button
               type="button"
               onClick={next}
-              className={`absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusRing}`}
+              className={`absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusClass}`}
               aria-label="Next slide"
             >
               <ChevronRight />
@@ -174,7 +174,7 @@ export default function GallerySection() {
             <button
               type="button"
               onClick={() => setIsPlaying((p) => !p)}
-              className={`absolute bottom-3 sm:bottom-4 left-3 sm:left-4 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusRing}`}
+              className={`absolute bottom-3 sm:bottom-4 left-3 sm:left-4 z-10 w-11 h-11 sm:w-12 sm:h-12 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-sm text-gray-800 hover:bg-white transition-colors shadow-lg ${focusClass}`}
               aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
             >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
@@ -192,7 +192,7 @@ export default function GallerySection() {
                   aria-label={`Go to slide ${i + 1}`}
                   aria-current={i === current ? 'true' : undefined}
                   onClick={() => goTo(i)}
-                  className={`rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center p-2 ${focusRing} ${
+                  className={`rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center p-2 ${focusClass} ${
                     i === current
                       ? 'w-3 h-3 bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.6)]'
                       : 'w-2.5 h-2.5 bg-white/50 hover:bg-white/80 border border-white/60'

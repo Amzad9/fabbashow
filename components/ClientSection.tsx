@@ -85,7 +85,7 @@ export default function ClientSection() {
   return (
     <section
       id="partners"
-      className="relative z-40 scroll-mt-24 pt-0 pb-8 sm:pb-12 -mt-[5vh] overflow-hidden px-4 sm:px-6"
+      className="relative z-40 scroll-mt-24 pt-0 pb-16 sm:pb-20 md:pb-24 -mt-[5vh] overflow-hidden section-padding-x"
     >
       <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
@@ -114,19 +114,19 @@ export default function ClientSection() {
           </div>
         </div>
 
-        <div className="mt-6 sm:mt-8 rounded-2xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-4 sm:p-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-8 sm:mt-10 md:mt-12 rounded-2xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-4 sm:p-6 md:p-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {FEATURES.map(({ title, description, icon }) => (
               <article
                 key={title}
                 className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/20 backdrop-blur-xl p-6 sm:p-8 text-center shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:bg-white/30 hover:border-white/50 transition-all duration-300"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
-                <svg className="relative w-12 h-12 sm:w-14 sm:h-14 text-primary/80 mb-4 sm:mb-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <svg className="relative w-12 h-12 sm:w-14 sm:h-14 text-primary mb-4 sm:mb-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   {icon}
                 </svg>
                 <h3 className="relative text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{title}</h3>
-                <p className="relative text-gray-600 text-sm leading-relaxed">{description}</p>
+                <p className="relative text-gray-600 text-sm sm:text-base leading-relaxed">{description}</p>
               </article>
             ))}
           </div>
