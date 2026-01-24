@@ -59,7 +59,7 @@ export default function Hero() {
               <span className="block mt-1 sm:mt-2">like never before!</span>
             </h1>
 
-            <p className="section-lead max-w-2xl text-white/90 text-base sm:text-lg md:text-xl">
+            <p className="section-lead max-w-xl text-white/90 text-base sm:text-lg md:text-xl">
               Step into a time machine and witness abba live in their prime with the fabba show, the sensational stage
               production that&apos;s taking audiences by storm all across the united states!
             </p>
