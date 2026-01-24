@@ -54,7 +54,7 @@ const SOCIAL = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="scroll-mt-24 relative overflow-hidden" role="contentinfo">
+    <footer id="contact" className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden" role="contentinfo">
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/20 to-transparent" aria-hidden />
       {/* Blue overlays – top left, middle, bottom left */}
@@ -62,8 +62,8 @@ export default function Footer() {
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary-light/8 blur-[100px] pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -left-32 w-72 h-72 rounded-full bg-primary-dark/12 blur-3xl pointer-events-none" aria-hidden />
 
-      <div className="relative container mx-auto section-padding-x pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-10">
-        <div className="rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-10 pt-8 sm:pt-10 pb-10 sm:pb-12">
+      <div className="relative container mx-auto section-padding-x pt-10 sm:pt-16 md:pt-20 pb-5 sm:pb-8 md:pb-10">
+        <div className="rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-10 pt-6 sm:pt-10 pb-8 sm:pb-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 sm:gap-10 lg:gap-12">
             <a
               href="#home"

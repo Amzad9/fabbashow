@@ -68,7 +68,7 @@ export default function MeetTheCastSection() {
     <section
       id="cast"
       aria-labelledby="cast-heading"
-      className="scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
+      className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
     >
       <div
         className="absolute inset-0 bg-linear-to-b from-primary-pale/40 via-white to-primary-pale/30"
@@ -78,7 +78,7 @@ export default function MeetTheCastSection() {
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto">
-        <div className="text-center mb-10 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <p className="section-label text-amber-500 mb-2 sm:mb-3">
             The performers
           </p>
@@ -90,7 +90,7 @@ export default function MeetTheCastSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {CAST.map((member, i) => (
             <CastCard key={member.name} {...member} index={i} />
           ))}

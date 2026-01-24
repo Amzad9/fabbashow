@@ -85,16 +85,16 @@ export default function ClientSection() {
   return (
     <section
       id="partners"
-      className="relative z-40 scroll-mt-24 pt-16 pb-16 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
+      className="relative z-40 scroll-mt-20 sm:scroll-mt-24 pt-14 sm:pt-16 pb-14 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
     >
       <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto">
-        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative">
+        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
 
-          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 md:gap-8 lg:gap-10">
             {PARTNERS.map(({ name, logo }) => (
               <PartnerLogo key={name} name={name} logo={logo} />
             ))}
@@ -117,7 +117,7 @@ export default function ClientSection() {
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-12 rounded-2xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-4 sm:p-6 md:p-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {FEATURES.map(({ title, description, icon }) => (
               <article
                 key={title}
