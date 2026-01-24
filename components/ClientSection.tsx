@@ -24,10 +24,10 @@ function PartnerLogo({ name, logo }: { name: string; logo: string }) {
 }
 
 const PARTNERS = [
-  { name: 'Ticketmaster', logo: 'https://logo.clearbit.com/ticketmaster.com' },
-  { name: 'Broadway World', logo: 'https://logo.clearbit.com/broadwayworld.com' },
-  { name: 'The New York Times', logo: 'https://logo.clearbit.com/nytimes.com' },
-  { name: 'VOGUE', logo: 'https://logo.clearbit.com/vogue.com' },
+  { name: 'Ticketmaster', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-swtvpQ825Twr9l3lOcItRvkzCWppWgbDvQ&s' },
+  { name: 'Broadway World', logo: 'https://play-lh.googleusercontent.com/edz4NK9AK9rExSfbs_V3vdzCG2zQ6YTsv9AM8MQINmcRnMJpSqwLRIZN6gQ-DzSDuf8=w600-h300-pc0xffffff-pd' },
+  { name: 'The New York Times', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png' },
+  { name: 'VOGUE', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/VOGUE_LOGO.svg' },
 ];
 
 const FEATURES = [
