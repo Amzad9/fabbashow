@@ -68,17 +68,17 @@ const ArrowIcon = () => (
   </svg>
 );
 
-const btnFocus =
-  'focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark';
+const focusClass = 'focus-accent';
 
 export default function EventsSection() {
   return (
     <section
       id="events"
       aria-labelledby="events-heading"
-      className="scroll-mt-24 pt-16 sm:pt-20 md:pt-28 pb-16 sm:pb-24 md:pb-80 overflow-hidden relative z-20 px-4 sm:px-6"
+      className="scroll-mt-24 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-16 sm:pb-24 md:pb-80 overflow-hidden relative z-20 section-padding-x"
     >
-      <div className="absolute inset-0 bg-linear-to-b from-primary-dark via-primary to-primary-dark" aria-hidden />
+      <div className="absolute inset-0 bg-surface-dark" aria-hidden />
+      <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" aria-hidden />
       <div className="absolute top-1/3 -right-48 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute bottom-1/3 -left-48 w-80 h-80 rounded-full bg-primary-light/10 blur-3xl pointer-events-none" aria-hidden />
@@ -93,19 +93,19 @@ export default function EventsSection() {
             backgroundSize: 'cover',
           }}
         />
-        <div className="absolute inset-0 bg-linear-to-t from-primary-dark via-primary-dark/90 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-surface-dark via-surface-dark/90 to-transparent" />
       </div>
 
       <div className="relative container mx-auto z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-10 sm:mb-16 gap-6 sm:gap-8">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <p className="text-amber-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3">
+            <p className="section-label text-amber-400 mb-2 sm:mb-3">
               Live performances
             </p>
-            <h2 id="events-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 tracking-tight">
+            <h2 id="events-heading" className="section-title text-white mb-3 sm:mb-4">
               Upcoming Events
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl lg:max-w-none">
+            <p className="section-lead text-white/70 max-w-2xl lg:max-w-none">
               Don&apos;t miss your chance to experience the magic live!
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function EventsSection() {
                   </span>
                   <a
                     href="#"
-                    className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-bold text-sm min-h-[44px] transition-all duration-300 relative overflow-hidden group ${btnFocus} ${
+                    className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-bold text-sm min-h-[44px] transition-all duration-300 relative overflow-hidden group ${focusClass} ${
                       event.cta === 'Get Tickets'
                         ? 'bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)]'
                         : 'bg-white/15 text-white border border-white/25 hover:bg-white/25 hover:border-white/40'
@@ -194,7 +194,7 @@ export default function EventsSection() {
               <button
                 type="button"
                 aria-label="Get notified when new shows are announced"
-                className={`inline-flex items-center justify-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors rounded-lg px-3 py-2.5 min-h-[44px] ${btnFocus} focus-visible:ring-offset-primary-dark`}
+                className={`inline-flex items-center justify-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors rounded-lg px-3 py-2.5 min-h-[44px] ${focusClass}`}
               >
                 Get notified when new shows are announced
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>

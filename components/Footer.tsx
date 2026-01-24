@@ -11,8 +11,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-const focusRing =
-  'focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1729]';
+const focusClass = 'focus-accent';
 
 const SOCIAL = [
   {
@@ -56,15 +55,15 @@ const SOCIAL = [
 export default function Footer() {
   return (
     <footer id="contact" className="scroll-mt-24 relative overflow-hidden" role="contentinfo">
-      <div className="absolute inset-0 bg-[#0f1729]" aria-hidden />
+      <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/20 to-transparent" aria-hidden />
 
-      <div className="relative container mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-6 sm:pb-8">
+      <div className="relative container mx-auto section-padding-x pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-10">
         <div className="rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-10 pt-8 sm:pt-10 pb-10 sm:pb-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 sm:gap-10 lg:gap-12">
             <a
               href="#home"
-              className={`flex items-center gap-3 self-start ${focusRing} rounded-lg -m-1 p-1`}
+              className={`flex items-center gap-3 self-start ${focusClass} rounded-lg -m-1 p-1`}
               aria-label="The fABBA Show – home"
             >
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0">
@@ -84,7 +83,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className={`relative inline-flex items-center text-gray-300 hover:text-white font-medium transition-colors py-2 min-h-[44px] rounded-lg -m-1 px-1 group ${focusRing}`}
+                  className={`relative inline-flex items-center text-gray-300 hover:text-white font-medium transition-colors py-2 min-h-[44px] rounded-lg -m-1 px-1 group ${focusClass}`}
                 >
                   {label}
                   <span className="absolute bottom-1 left-1 right-1 block w-[calc(100%-8px)] h-0.5 bg-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" aria-hidden />
@@ -98,7 +97,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className={`text-gray-400 hover:text-amber-400 transition-colors p-2.5 rounded-lg hover:bg-white/5 min-w-[44px] min-h-[44px] flex items-center justify-center ${focusRing}`}
+                  className={`text-gray-400 hover:text-amber-400 transition-colors p-2.5 rounded-lg hover:bg-white/5 min-w-[44px] min-h-[44px] flex items-center justify-center ${focusClass}`}
                 >
                   {icon}
                 </a>

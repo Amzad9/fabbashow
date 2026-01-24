@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
     <section
       id="testimonials"
       aria-labelledby="testimonials-heading"
-      className="scroll-mt-24 relative pt-16 sm:pt-20 md:pt-28 pb-16 sm:pb-24 overflow-hidden px-4 sm:px-6"
+      className="scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
     >
       <div
         className="absolute inset-0 bg-linear-to-b from-primary-pale/40 via-white to-primary-pale/30"
@@ -68,20 +68,20 @@ export default function TestimonialsSection() {
       <div className="absolute top-1/4 -left-32 w-64 h-64 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative container mx-auto container-wide">
         <div className="text-center mb-10 sm:mb-16">
-          <p className="text-amber-600 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3">
+          <p className="section-label text-amber-500 mb-2 sm:mb-3">
             What audiences say
           </p>
-          <h2 id="testimonials-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 tracking-tight">
+          <h2 id="testimonials-heading" className="section-title text-gray-900 mb-3 sm:mb-4">
             Testimonials
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="section-lead text-gray-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it—hear from fans and the cast.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12">
           {TESTIMONIALS.map((member) => (
             <TestimonialCard key={member.name} {...member} />
           ))}

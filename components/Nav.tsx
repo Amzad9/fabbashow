@@ -14,8 +14,7 @@ const NAV_LINKS = [
   // { label: 'Contact', href: '#contact' },
 ];
 
-const focusRing =
-  'focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black';
+const focusClass = 'focus-accent';
 
 export default function Nav({ isScrolled }: { isScrolled: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,11 +26,11 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
         isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto section-padding-x">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a
             href="#home"
-            className={`flex items-center gap-2 min-w-[44px] min-h-[44px] -m-2 p-2 rounded-lg ${focusRing}`}
+            className={`flex items-center gap-2 min-w-[44px] min-h-[44px] -m-2 p-2 rounded-lg ${focusClass}`}
             aria-label="The fABBA Show – home"
           >
             <div className="relative w-20 h-20 sm:w-12 sm:h-12 shrink-0">
@@ -51,14 +50,14 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
               <a
                 key={label}
                 href={href}
-                className={`text-white hover:text-amber-400 transition-colors font-medium px-3 py-2 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center ${focusRing}`}
+                className={`text-white hover:text-amber-400 transition-colors font-medium px-3 py-2 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center ${focusClass}`}
               >
                 {label}
               </a>
             ))}
             <a
               href="#events"
-              className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-5 py-2.5 rounded-full font-semibold hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:scale-105 transition-all min-h-[44px] flex items-center ${focusRing}`}
+              className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-5 py-2.5 rounded-full font-semibold hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:scale-105 transition-all min-h-[44px] flex items-center ${focusClass}`}
             >
               Book Tickets
             </a>
@@ -70,7 +69,7 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
             aria-expanded={menuOpen}
             aria-controls="nav-menu"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className={`md:hidden text-white p-2 min-w-[44px] min-h-[44px] rounded-lg ${focusRing}`}
+            className={`md:hidden text-white p-2 min-w-[44px] min-h-[44px] rounded-lg ${focusClass}`}
           >
             {menuOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -108,7 +107,7 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
               key={label}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className={`text-white hover:text-amber-400 hover:bg-white/10 transition-colors font-medium px-4 py-3 rounded-lg min-h-[44px] flex items-center ${focusRing}`}
+              className={`text-white hover:text-amber-400 hover:bg-white/10 transition-colors font-medium px-4 py-3 rounded-lg min-h-[44px] flex items-center ${focusClass}`}
             >
               {label}
             </a>
@@ -116,7 +115,7 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
           <a
             href="#events"
             onClick={() => setMenuOpen(false)}
-            className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-4 py-3 rounded-full font-semibold mt-2 min-h-[44px] flex items-center justify-center hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all ${focusRing}`}
+            className={`bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-4 py-3 rounded-full font-semibold mt-2 min-h-[44px] flex items-center justify-center hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all ${focusClass}`}
           >
             Book Tickets
           </a>

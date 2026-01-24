@@ -53,7 +53,7 @@ function CastCard({ name, role, tagline, image, index }: (typeof CAST)[number] &
 
         <div className="text-center space-y-1">
           <h3 id={id} className="text-lg sm:text-xl font-bold text-gray-900">{name}</h3>
-          <p className="text-amber-600 font-semibold text-xs sm:text-sm uppercase tracking-wider">{role}</p>
+          <p className="text-amber-500 font-semibold text-xs sm:text-sm uppercase tracking-wider">{role}</p>
           <p className="text-gray-500 text-sm mt-2 max-w-[240px] mx-auto leading-relaxed">
             {tagline}
           </p>
@@ -68,7 +68,7 @@ export default function MeetTheCastSection() {
     <section
       id="cast"
       aria-labelledby="cast-heading"
-      className="scroll-mt-24 relative pt-16 sm:pt-20 md:pt-28 pb-16 sm:pb-24 overflow-hidden px-4 sm:px-6"
+      className="scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
     >
       <div
         className="absolute inset-0 bg-linear-to-b from-primary-pale/40 via-white to-primary-pale/30"
@@ -79,18 +79,18 @@ export default function MeetTheCastSection() {
 
       <div className="relative container mx-auto">
         <div className="text-center mb-10 sm:mb-16">
-          <p className="text-amber-600 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3">
+          <p className="section-label text-amber-500 mb-2 sm:mb-3">
             The performers
           </p>
-          <h2 id="cast-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 tracking-tight">
+          <h2 id="cast-heading" className="section-title text-gray-900 mb-3 sm:mb-4">
             Meet the Cast
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="section-lead text-gray-600 max-w-2xl mx-auto">
             The talented artists who bring the magic of ABBA to the stage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
           {CAST.map((member, i) => (
             <CastCard key={member.name} {...member} index={i} />
           ))}

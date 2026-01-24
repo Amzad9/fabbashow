@@ -12,9 +12,21 @@
   --color-primary-pale: #EBF4FF;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Dark surfaces – footer, CTA, dark sections */
+  --color-surface-dark: #0f1729;
+  /* Accent – CTAs, highlights, focus */
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+  --color-accent-dark: #d97706;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-script: var(--font-dancing-script);
+  /* Section spacing */
+  --section-px: 1rem;
+  --section-py: 4rem;
+  --section-py-sm: 5rem;
+  --section-py-md: 6rem;
+  --section-py-lg: 7rem;
 }
 
 
@@ -110,4 +122,76 @@ body {
 .focus-ring:focus-visible {
   outline: 2px solid var(--color-primary-light, #5b9fd4);
   outline-offset: 2px;
+}
+
+/* Design system: consistent focus, section padding, typography */
+.focus-accent:focus {
+  outline: none;
+}
+.focus-accent:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 2px;
+}
+
+.section-padding {
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+@media (min-width: 640px) {
+  .section-padding { padding-top: var(--section-py-sm); padding-bottom: var(--section-py-sm); }
+}
+@media (min-width: 768px) {
+  .section-padding { padding-top: var(--section-py-md); padding-bottom: var(--section-py-md); }
+}
+@media (min-width: 1024px) {
+  .section-padding { padding-top: var(--section-py-lg); padding-bottom: var(--section-py-lg); }
+}
+
+.section-padding-x {
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+@media (min-width: 640px) {
+  .section-padding-x { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+.section-label {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  .section-label { font-size: 0.875rem; }
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 640px) { .section-title { font-size: 2.25rem; } }
+@media (min-width: 768px) { .section-title { font-size: 3rem; } }
+@media (min-width: 1024px) { .section-title { font-size: 3.75rem; } }
+
+.section-lead {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (min-width: 640px) { .section-lead { font-size: 1.125rem; } }
+@media (min-width: 768px) { .section-lead { font-size: 1.25rem; } }
+
+.container-narrow {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-wide {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
 }

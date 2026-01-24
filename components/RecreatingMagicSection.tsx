@@ -18,7 +18,7 @@ export default function RecreatingMagicSection() {
     <section
       id="about-show"
       aria-labelledby="about-show-heading"
-      className="scroll-mt-24 relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-visible bg-[#1A1A2E] z-20 px-4 sm:px-6"
+      className="scroll-mt-24 relative overflow-visible bg-surface-dark z-20 section-padding section-padding-x"
     >
       <div className="relative container mx-auto flex flex-col">
         <div className="relative w-full aspect-video mx-auto mb-8 sm:mb-12 md:mb-16 mt-0 md:-mt-[40vh]">
@@ -37,13 +37,13 @@ export default function RecreatingMagicSection() {
           </video>
         </div>
 
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-          <h2 id="about-show-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem] font-sans font-bold text-white leading-tight mb-4 sm:mb-6">
+        <div className="flex flex-col items-center text-center container-narrow">
+          <h2 id="about-show-heading" className="section-title text-white mb-4 sm:mb-6">
             Recreating the magic of{' '}
             <span className="text-amber-400">ABBA</span>
             {' '}for a new generation
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="section-lead text-gray-400 leading-relaxed">
             A polished collage of performance, costume, and timeless hits—The fABBA Show brings the
             spirit of ABBA to life for a new generation. Experience the energy, the nostalgia, and
             the pure joy of their music like never before.

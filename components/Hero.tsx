@@ -42,16 +42,16 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 h-full flex items-center px-4 sm:px-6">
+      <div className="relative z-10 h-full flex items-center section-padding-x">
         <div className="container mx-auto text-left">
           <div className="max-w-4xl space-y-6 sm:space-y-8 animate-fade-in">
             <div className="inline-block">
-              <span className="text-amber-500 text-base sm:text-lg md:text-xl font-semibold tracking-wider ">
+              <span className="text-amber-500 text-base sm:text-lg md:text-xl font-semibold tracking-wider">
                 Introducing
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-auto ">
+            <h1 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               <span className="block">The Fabba show</span>
               <span className="block mt-1 sm:mt-2 bg-linear-to-r from-amber-500 via-amber-100 to-amber-500 bg-clip-text text-transparent">
                 experience Abba
@@ -59,7 +59,7 @@ export default function Hero() {
               <span className="block mt-1 sm:mt-2">like never before!</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl text-white/90 leading-relaxed ">
+            <p className="section-lead max-w-2xl text-white/90 text-base sm:text-lg md:text-xl">
               Step into a time machine and witness abba live in their prime with the fabba show, the sensational stage
               production that&apos;s taking audiences by storm all across the united states!
             </p>
@@ -67,14 +67,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
               <a
                 href="#events"
-                className="group relative bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] hover:scale-105 transition-all duration-300 overflow-hidden text-center min-h-[48px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                className="focus-accent group relative bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] hover:scale-105 transition-all duration-300 overflow-hidden text-center min-h-[48px] flex items-center justify-center"
               >
                 <span className="relative z-10">Book Tickets Now</span>
                 <div className="absolute inset-0 bg-linear-to-r from-amber-300 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
               </a>
               <a
                 href="#about-show"
-                className="group bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                className="focus-accent group bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center"
               >
                 Watch Trailer
               </a>
@@ -82,7 +82,7 @@ export default function Hero() {
 
             <a
               href="#events"
-              className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all text-white duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              className="focus-accent absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all text-white duration-300"
               aria-label="Scroll to events"
             >
               <svg className="w-6 h-6 text-gray-100 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
