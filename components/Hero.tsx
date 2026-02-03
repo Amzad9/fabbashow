@@ -78,9 +78,9 @@ export default function Hero() {
                   playsInline
                   aria-label="The fABBA Show promo video"
                   className="h-full w-full object-cover"
-                  src="/1275-145116912_small.mp4"
+                  src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4"
                 >
-                  <source src="/1275-145116912_small.mp4" type="video/mp4" />
+                  <source src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
