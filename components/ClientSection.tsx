@@ -9,7 +9,7 @@ function PartnerLogo({ name, logo }: { name: string; logo: string }) {
     return <span className="text-lg font-bold text-gray-600 tracking-tight">{name}</span>;
   }
   return (
-    <div className="relative h-8 w-[120px] sm:h-9 sm:w-[150px] grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+    <div className="relative h-6 w-[90px] sm:h-7 sm:w-[110px] grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
       <Image
         src={logo}
         alt={`${name} partner logo`}
@@ -85,50 +85,51 @@ export default function ClientSection() {
   return (
     <section
       id="partners"
-      className="relative z-40 scroll-mt-20 sm:scroll-mt-24 pt-14 sm:pt-16 pb-14 sm:pb-20 md:pb-24 overflow-hidden section-padding-x"
+      className="relative z-40 scroll-mt-20 sm:scroll-mt-24 pt-8 sm:pt-10 pb-8 sm:pb-10 md:pb-12 overflow-hidden"
     >
       <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto">
-        <div className="bg-white/80 backdrop-blur-2xl rounded-2xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 md:gap-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
+        <div className='p-4'>
+        <div className="bg-white/80 backdrop-blur-2xl rounded-xl border border-gray-100 p-3 sm:p-4 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 md:gap-5 relative overflow-hidden">
+          <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-xl" aria-hidden />
 
-          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 md:gap-8 lg:gap-10">
+          <div className="relative flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-4 md:gap-5">
             {PARTNERS.map(({ name, logo }) => (
               <PartnerLogo key={name} name={name} logo={logo} />
             ))}
           </div>
-          <div className="relative flex flex-col sm:flex-col items-center gap-2 sm:gap-4 shrink-0">
+          <div className="relative flex flex-col sm:flex-col items-center gap-1.5 sm:gap-2 shrink-0">
          
             <div className="text-center sm:text-left flex">
-              <p className="text-lg sm:text-xl font-bold text-black">4.9/5</p>
+              <p className="text-base font-bold text-black">4.9/5</p>
               <div className="flex items-center gap-0.5" role="img" aria-label="5 out of 5 stars">
               {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
+                <svg key={i} className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
             </div>
-            <p className="text-xs sm:text-sm text-gray-500">Average Review Rating</p>
+            <p className="text-[0.7rem] sm:text-xs text-gray-500">Average Review Rating</p>
 
           </div>
         </div>
-
-        <div className="mt-8 sm:mt-10 md:mt-12 rounded-2xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-4 sm:p-6 md:p-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
+        </div>
+        <div className="mt-5 sm:mt-6 md:mt-7 rounded-xl bg-linear-to-br from-gray-100/10 to-primary-pale/30 p-3 sm:p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
             {FEATURES.map(({ title, description, icon }) => (
               <article
                 key={title}
-                className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/20 backdrop-blur-xl p-6 sm:p-8 text-center shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:bg-white/30 hover:border-white/50 transition-all duration-300"
+                className="group relative py-12 overflow-hidden rounded-xl border border-white/40 bg-white/20 backdrop-blur-xl px-4 text-center shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:bg-white/30 hover:border-white/50 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-2xl" aria-hidden />
-                <svg className="relative w-12 h-12 sm:w-14 sm:h-14 text-primary mb-4 sm:mb-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <div className="absolute inset-0 bg-linear-to-br from-white/30 via-primary/20 to-white/30 blur-3xl pointer-events-none rounded-xl" aria-hidden />
+                <svg className="relative w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 text-primary mb-2 sm:mb-2.5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   {icon}
                 </svg>
-                <h3 className="relative text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{title}</h3>
-                <p className="relative text-gray-600 text-sm sm:text-base leading-relaxed">{description}</p>
+                <h3 className="relative text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1.5 sm:mb-2">{title}</h3>
+                <p className="relative text-gray-600 text-xs sm:text-sm leading-relaxed">{description}</p>
               </article>
             ))}
           </div>

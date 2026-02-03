@@ -2,15 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Nav from '@/components/Nav';
-import Hero from '@/components/Hero';
-import RecreatingMagicSection from '@/components/RecreatingMagicSection';
-import MeetTheCastSection from '@/components/MeetTheCastSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import CTASection from '@/components/CTASection';
+import EventsSection from '@/components/EventsSection';
 import Footer from '@/components/Footer';
-import ClientSection from '@/components/ClientSection';
+import MeetTheCastSection from '@/components/MeetTheCastSection';
 
-export default function Home() {
+export default function EventsPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,12 +19,8 @@ export default function Home() {
     <div className="min-h-screen w-full bg-background overflow-x-hidden">
       <Nav isScrolled={isScrolled} />
       <main id="main-content" tabIndex={-1}>
-        <Hero />
-        <ClientSection />
-        <RecreatingMagicSection />
-        {/* <MeetTheCastSection /> */}
-        {/* <CTASection /> */}
-        <TestimonialsSection />
+        <EventsSection />
+        <MeetTheCastSection />
       </main>
       <Footer />
     </div>

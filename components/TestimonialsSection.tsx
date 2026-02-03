@@ -32,7 +32,7 @@ function StarRating({ count }: { count: number }) {
       {[...Array(5)].map((_, i) => (
         <svg
           key={i}
-          className={`w-4 h-4 sm:w-5 sm:h-5 ${i < count ? 'text-amber-500' : 'text-gray-200'}`}
+          className={`w-3 h-3 sm:w-3.5 sm:h-3.5 ${i < count ? 'text-amber-500' : 'text-gray-200'}`}
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden
@@ -46,32 +46,32 @@ function StarRating({ count }: { count: number }) {
 
 function TestimonialCard({ name, meta, quote, image, rating }: (typeof TESTIMONIALS)[number]) {
   return (
-    <article className="group relative flex flex-col h-full rounded-2xl border border-gray-100/80 bg-white/90 backdrop-blur-sm px-6 sm:px-8 py-8 sm:py-10 text-center shadow-[0_4px_24px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08),0_0_0_1px_rgba(26,97,166,0.12)] hover:border-primary/20">
+    <article className="group relative flex flex-col h-full rounded-xl border border-gray-100/80 bg-white/90 backdrop-blur-sm px-4 sm:px-5 py-5 sm:py-6 text-center shadow-[0_2px_12px_rgba(0,0,0,0.05),0_0_0_1px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.07),0_0_0_1px_rgba(26,97,166,0.1)] hover:border-primary/20">
       {/* Accent bar – top */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 rounded-b-full bg-linear-to-r from-amber-400 via-amber-500 to-primary" aria-hidden />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-b-full bg-linear-to-r from-amber-400 via-amber-500 to-primary" aria-hidden />
 
       <div className="relative flex flex-col items-center">
-        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-white ring-offset-2 ring-offset-primary-pale/50 shadow-lg mb-5 sm:mb-6">
+        <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden ring-2 ring-white ring-offset-1 ring-offset-primary-pale/50 shadow-md mb-3 sm:mb-4">
           <Image
             src={image}
             alt={`${name}, audience member`}
             fill
             className="object-cover"
-            sizes="96px"
+            sizes="64px"
           />
         </div>
 
         <StarRating count={rating} />
 
-        <blockquote className="mt-4 sm:mt-5 text-gray-700 text-sm sm:text-base leading-relaxed min-h-[4.5em]">
+        <blockquote className="mt-2.5 sm:mt-3 text-gray-700 text-xs sm:text-[0.8rem] leading-relaxed min-h-[3.5em]">
           <span className="text-primary/50">&ldquo;</span>
           {quote}
           <span className="text-primary/50">&rdquo;</span>
         </blockquote>
 
-        <footer className="mt-5 sm:mt-6">
-          <p className="text-base font-bold text-gray-900">{name}</p>
-          <p className="text-xs sm:text-sm text-gray-500 mt-0.5">{meta}</p>
+        <footer className="mt-3 sm:mt-3.5">
+          <p className="text-sm font-bold text-gray-900">{name}</p>
+          <p className="text-[0.7rem] sm:text-xs text-gray-500 mt-0.5">{meta}</p>
         </footer>
       </div>
     </article>
@@ -98,11 +98,11 @@ export default function TestimonialsSection() {
       <div className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,640px)] h-72 sm:h-80 rounded-3xl bg-linear-to-br from-primary/12 via-primary-light/10 to-primary-pale/20 blur-[60px] pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto container-wide z-10">
-        <div className="text-center mb-8 sm:mb-16">
-          <p className="section-label text-amber-500 mb-2 sm:mb-3">
+        <div className="text-center mb-5 sm:mb-8">
+          <p className="section-label text-amber-500 mb-1.5 sm:mb-2">
             What audiences say
           </p>
-          <h2 id="testimonials-heading" className="section-title text-gray-900 mb-3 sm:mb-4">
+          <h2 id="testimonials-heading" className="section-title text-gray-900 mb-2 sm:mb-2.5">
             Testimonials
           </h2>
           <p className="section-lead text-gray-600 max-w-2xl mx-auto">
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {TESTIMONIALS.map((member) => (
             <TestimonialCard key={member.name} {...member} />
           ))}
