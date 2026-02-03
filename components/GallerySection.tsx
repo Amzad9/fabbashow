@@ -83,7 +83,7 @@ export default function GallerySection() {
     <section
       id="gallery"
       aria-labelledby="gallery-heading"
-      className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden section-padding section-padding-x"
+      className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden section-padding section-padding-x pt-20 sm:pt-24 md:pt-28"
     >
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
@@ -97,18 +97,44 @@ export default function GallerySection() {
       <div className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,800px)] h-64 sm:h-72 rounded-3xl bg-linear-to-br from-primary/10 via-primary-light/8 to-primary-pale/15 blur-[50px] pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto container-wide z-10">
-        <div className="text-center mb-6 sm:mb-10 md:mb-12">
-          <p className="section-label text-amber-400 mb-2 sm:mb-3">
+        {/* Top banner – styled to match gallery section */}
+        <div className="mb-5 sm:mb-6 md:mb-8">
+          <div className="relative h-36 sm:h-44 md:h-52 lg:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-white/[0.07] backdrop-blur-md border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <Image
+              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80"
+              alt="ABBA tribute show costumes and stage lighting"
+              fill
+              className="object-cover opacity-90"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              priority
+            />
+            <div className="absolute inset-0 bg-linear-to-r from-surface-dark/90 via-primary-dark/50 to-transparent" aria-hidden />
+            <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-amber-400/50 to-transparent" aria-hidden />
+            <div className="relative h-full flex items-center px-3 sm:px-5 md:px-8">
+              <div className="max-w-xl space-y-0.5 sm:space-y-1">
+                <p className="text-[0.65rem] sm:text-xs uppercase tracking-[0.2em] text-amber-400">
+                  Costumes · Lights · Moments
+                </p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-white line-clamp-2 sm:line-clamp-none">
+                  A closer look at the glitter, glamour, and crowd energy that make The fABBA Show unforgettable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto relative">
+        <div className="text-center mb-5 sm:mb-7 md:mb-8">
+          <p className="section-label text-amber-400 mb-1.5 sm:mb-2">
             Behind the scenes
           </p>
-          <h2 id="gallery-heading" className="section-title text-white mb-3 sm:mb-4">
+          <h2 id="gallery-heading" className="section-title text-white mb-2 sm:mb-2.5">
             Gallery
           </h2>
           <p className="section-lead text-white/70 max-w-2xl mx-auto">
             Glimpses from the stage—costumes, crowd, and the magic of live performance.
           </p>
         </div>
-
+       
         <div className="relative">
           <div
             ref={carouselRef}
@@ -116,14 +142,14 @@ export default function GallerySection() {
             aria-roledescription="carousel"
             aria-label="Gallery slideshow"
             tabIndex={0}
-            className={`relative rounded-2xl overflow-hidden bg-white outline-none ${focusClass} border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.08)]`}
+            className={`relative rounded-xl overflow-hidden bg-white outline-none ${focusClass} border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,255,255,0.06)]`}
           >
             {/* Top accent bar */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 rounded-b-full bg-linear-to-r from-amber-400 via-amber-500 to-primary z-20" aria-hidden />
 
             <div
               className="relative w-full overflow-hidden bg-gray-900"
-              style={{ aspectRatio: '16/9', minHeight: 180 }}
+              style={{ aspectRatio: '16/9', minHeight: 160 }}
             >
               {/* Flex track – sliding strip */}
               <div
@@ -211,16 +237,17 @@ export default function GallerySection() {
 
           {/* Slide counter + caption */}
           <div
-            className="mt-4 sm:mt-5 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center"
+            className="mt-3 sm:mt-3.5 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 text-center"
             aria-live="polite"
             aria-atomic="true"
           >
-            <span className="text-white/60 text-sm tabular-nums">
+            <span className="text-white/60 text-xs tabular-nums">
               {current + 1} of {SLIDES.length}
             </span>
             <span className="hidden sm:inline text-white/40" aria-hidden>·</span>
-            <span className="text-white/70 text-sm sm:text-base">{slide.title}</span>
+            <span className="text-white/70 text-xs sm:text-sm">{slide.title}</span>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -5,9 +5,9 @@ import Image from 'next/image';
 const LOGO_SRC = 'https://thefabbashow.com/imgs/logos/logo.png';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Tour Dates', href: '#events' },
-  { label: 'About', href: '#about-show' },
+  { label: 'Home', href: '/' },
+  { label: 'Tour Dates', href: '/events' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -62,15 +62,15 @@ export default function Footer() {
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary-light/8 blur-[100px] pointer-events-none" aria-hidden />
       <div className="absolute -bottom-24 -left-32 w-72 h-72 rounded-full bg-primary-dark/12 blur-3xl pointer-events-none" aria-hidden />
 
-      <div className="relative container mx-auto section-padding-x pt-10 sm:pt-16 md:pt-20 pb-5 sm:pb-8 md:pb-10">
-        <div className="rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-10 pt-6 sm:pt-10 pb-8 sm:pb-12">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 sm:gap-10 lg:gap-12">
+      <div className="relative container mx-auto section-padding-x pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-10">
+        <div className="rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-8 lg:px-10 pt-6 sm:pt-8 md:pt-10 pb-6 sm:pb-8 md:pb-12">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             <a
-              href="#home"
-              className={`flex items-center gap-3 self-start ${focusClass} rounded-lg -m-1 p-1`}
+              href="/"
+              className={`flex items-center gap-2 sm:gap-3 self-start lg:flex-shrink-0 ${focusClass} rounded-lg -m-1 p-1 min-h-[44px]`}
               aria-label="The fABBA Show – home"
             >
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 shrink-0">
                 <Image
                   src={LOGO_SRC}
                   alt=""
@@ -82,7 +82,7 @@ export default function Footer() {
            
             </a>
 
-            <nav aria-label="Footer navigation" className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-2">
+            <nav aria-label="Footer navigation" className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-2">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
                   key={label}

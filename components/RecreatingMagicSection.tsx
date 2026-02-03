@@ -26,34 +26,40 @@ export default function RecreatingMagicSection() {
       <div className="absolute -bottom-24 -left-32 w-72 h-72 rounded-full bg-primary-dark/15 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-primary-light/30 to-transparent" aria-hidden />
 
-      <div className="relative container mx-auto flex flex-col">
-        <div className="relative w-full aspect-video mx-auto mb-6 sm:mb-12 md:mb-16 mt-0 md:-mt-[40vh] max-w-full isolate z-50">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            aria-label="The fABBA Show promo video – performance highlights"
-            title="The fABBA Show Promo"
-            className="w-full h-full object-cover border-4 border-white/10 rounded-xl shadow-2xl"
-            src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4"
-          >
-            <source src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <div className="relative container mx-auto">
+        <div className="grid items-center gap-6 sm:gap-8 md:grid-cols-12 md:gap-6">
+          {/* Left: video */}
+          <div className="relative w-full max-w-xl mx-auto md:max-w-none md:mx-0 md:col-span-6">
+            <div className="relative aspect-video min-h-[200px] sm:min-h-[240px] isolate z-50 rounded-xl border border-white/15 bg-black/40 shadow-xl shadow-black/60 overflow-hidden">
+              <video
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="The fABBA Show promo video – performance highlights"
+                title="The fABBA Show Promo"
+                className="h-full w-full object-cover"
+                src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4"
+              >
+                <source src="https://thefabbashow.com/vids/The-Fabba-Show-Promo.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
 
-        <div className="flex flex-col items-center text-center container-narrow">
-          <h2 id="about-show-heading" className="section-title text-white mb-4 sm:mb-6">
-            Recreating the magic of{' '}
-            <span className="text-amber-400">ABBA</span>
-            {' '}for a new generation
-          </h2>
-          <p className="section-lead text-gray-400 leading-relaxed">
-            A polished collage of performance, costume, and timeless hits—The fABBA Show brings the
-            spirit of ABBA to life for a new generation. Experience the energy, the nostalgia, and
-            the pure joy of their music like never before.
-          </p>
+          {/* Right: content */}
+          <div className="container-narrow md:col-span-6 md:ml-auto md:text-left text-center space-y-2.5 sm:space-y-3 px-0 sm:px-2">
+          <div className="md:ps-8 lg:ps-12 md:pe-4 lg:pe-8">
+             <h2 id="about-show-heading" className="section-title text-white mb-0.5 sm:mb-1">
+              Recreating the magic of <span className="text-amber-400">ABBA</span> for a new generation
+            </h2>
+            <p className="section-lead text-gray-300 leading-relaxed text-xs sm:text-[0.85rem]">
+              A polished collage of performance, costume, and timeless hits—The fABBA Show brings the
+              spirit of ABBA to life for a new generation. Experience the energy, the nostalgia, and
+              the pure joy of their music like never before.
+            </p>
+          </div>
+          </div>
         </div>
       </div>
     </section>

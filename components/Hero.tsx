@@ -18,73 +18,72 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="relative z-30 h-screen w-full min-h-[420px] sm:min-h-[480px] md:min-h-[520px] overflow-hidden"
+      className="relative z-30 w-full overflow-hidden bg-blue-200/20 pt-20 sm:pt-24 md:pt-20 pb-0"
     >
-      <div className="absolute inset-0 z-0 bg-primary overflow-hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          aria-label="The fABBA Show promo video"
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/1275-145116912_small.mp4"
-        >
-          <source src="/1275-145116912_small.mp4" type="video/mp4" />
-        </video>
-        {/* <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/10 to-black/10" />
-        <div className="absolute inset-0 bg-linear-to-r from-primary/20 to-transparent" /> */}
-      </div>
+      <div className="absolute left-0 top-0 w-1/3 h-1/3 bg-white/20 blur-3xl pointer-events-none rounded-l-2xl -z-10" aria-hidden />
+      {/* Mobile/tablet: padded container. Desktop: same as before */}
+      <div className="">
+        <div className="container-fluid mx-auto relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 h-full bg-blue-300/30 blur-3xl pointer-events-none rounded-l-2xl -z-10" aria-hidden />
+          {/* Mobile/tablet: 1 col stacked. Desktop (md+): 2 cols – unchanged */}
+          <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 sm:gap-8 md:gap-0">
+            {/* Text */}
+            <div className="w-full md:col-span-6 space-y-3 sm:space-y-4 md:space-y-6 px-0 sm:px-2 md:px-6 lg:px-12 py-6 sm:py-8 md:py-12">
+              <div className="md:ps-4 lg:ps-12 ps-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900">
+                <span className="block">Experience the Ultimate</span>
+                <span className="block">
+                  <span className="text-amber-500">ABBA</span> Tribute Celebration
+                </span>
+              </h1>
 
-      <div
-        className="absolute inset-0 z-1 bg-linear-to-tr from-black/90 via-black/50 to-transparent"
-        aria-hidden
-      />
+              <p className="max-w-lg text-sm sm:text-base md:text-lg leading-relaxed text-gray-600">
+                High-energy performance, live vocals, and audience participation in a spectacular
+                70s pop concert.
+              </p>
 
-      <div className="relative z-10 h-full flex items-end  pb-20 md:items-end sm:items-center section-padding-x">
-        <div className="container mx-auto text-left">
-          <div className="max-w-4xl space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
-          
-
-            <h1 className="section-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              <span className="block">The Fabba show</span>
-              <span className="block mt-1 sm:mt-2 bg-linear-to-r from-amber-500 via-amber-100 to-amber-500 bg-clip-text text-transparent">
-                experience Abba
-              </span>
-              <span className="block mt-1 sm:mt-2">like never before!</span>
-            </h1>
-
-            <p className="section-lead max-w-xl text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
-              Step into a time machine and witness abba live in their prime with the fabba show, the sensational stage
-              production that&apos;s taking audiences by storm all across the united states!
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 pt-1 sm:pt-4">
-              <a
-                href="#events"
-                className="focus-accent group relative bg-linear-to-r from-amber-400 to-amber-500 text-gray-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] hover:scale-105 transition-all duration-300 overflow-hidden text-center min-h-[48px] flex items-center justify-center"
-              >
-                <span className="relative z-10">Book Tickets Now</span>
-                <div className="absolute inset-0 bg-linear-to-r from-amber-300 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
-              </a>
-              <a
-                href="#about-show"
-                className="focus-accent group bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center"
-              >
-                Watch Trailer
-              </a>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
+                <a
+                  href="#events"
+                  className="focus-accent inline-flex min-h-[48px] items-center justify-center rounded-full bg-linear-to-br from-primary-dark via-primary to-primary-light px-6 sm:px-8 py-3 text-sm sm:text-base font-bold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #145088 0%, #1A61A6 50%, #5b9fd4 100%)',
+                    boxShadow: '0 4px 12px rgba(26, 97, 166, 0.4), inset 0 1px 0 rgba(255,255,255,0.2)',
+                  }}
+                >
+                  Book Tickets
+                </a>
+                <a
+                  href="#"
+                  className="focus-accent inline-flex min-h-[48px] items-center justify-center rounded-full bg-linear-to-br from-amber-400 via-amber-500 to-amber-600 px-6 sm:px-8 py-3 text-sm sm:text-base font-bold text-gray-900 shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%)',
+                    boxShadow: '0 4px 12px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255,255,255,0.3)',
+                  }}
+                >
+                  Watch Trailer
+                </a>
+              </div>
+              </div>
             </div>
 
-            <a
-              href="#events"
-              className="focus-accent absolute bottom-4 sm:bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all text-white duration-300 min-w-[44px] min-h-[44px]"
-              aria-label="Scroll to events"
-            >
-              <svg className="w-6 h-6 text-gray-100 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </a>
+            {/* Video: full width below md; desktop right col unchanged */}
+            <div className="relative w-full md:col-span-6 h-[280px] sm:h-[360px] md:h-[600px] lg:h-[700px] min-h-[240px] md:min-h-0">
+              <div className="absolute inset-0 rounded-tl-2xl rounded-bl-2xl md:rounded-tl-3xl md:rounded-bl-3xl overflow-hidden bg-black shadow-2xl">
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="The fABBA Show promo video"
+                  className="h-full w-full object-cover"
+                  src="/1275-145116912_small.mp4"
+                >
+                  <source src="/1275-145116912_small.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
