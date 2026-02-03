@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-const LOGO_SRC = 'https://thefabbashow.com/imgs/logos/logo.png';
+const LOGO_SRC = 'https://thefabbashow.com/_next/image?url=%2Fimgs%2Flogos%2Flogo.png&w=1920&q=75';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -70,7 +70,7 @@ export default function Footer() {
               className={`flex items-center gap-2 sm:gap-3 self-start lg:flex-shrink-0 ${focusClass} rounded-lg -m-1 p-1 min-h-[44px]`}
               aria-label="The fABBA Show – home"
             >
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 shrink-0">
+              <div className="relative w-32 h-32 shrink-0">
                 <Image
                   src={LOGO_SRC}
                   alt=""

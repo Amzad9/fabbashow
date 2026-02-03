@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const LOGO_SRC = 'https://thefabbashow.com/imgs/logos/logo.png';
+const LOGO_SRC = 'https://thefabbashow.com/_next/image?url=%2Fimgs%2Flogos%2Flogo.png&w=1920&q=75';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -41,13 +41,13 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
       className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300"
     >
       <div className="container mx-auto section-padding-x">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between ">
           <Link
             href="/"
-            className={`flex items-center gap-2 min-w-[44px] min-h-[44px] -m-2 p-2 rounded-lg ${focusClass}`}
+            className={`flex items-center gap-2 -m-2 p-2 rounded-lg ${focusClass}`}
             aria-label="The fABBA Show – home"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 shrink-0">
+            <div className="relative w-24 h-24 shrink-0">
               <Image
                 src={LOGO_SRC}
                 alt=""
