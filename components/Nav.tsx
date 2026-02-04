@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const LOGO_SRC = 'https://thefabbashow.com/_next/image?url=%2Fimgs%2Flogos%2Flogo.png&w=1920&q=75';
+const LOGO_SRC = '/logo-h.webp';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -53,7 +53,7 @@ export default function Nav({ isScrolled }: { isScrolled: boolean }) {
                 alt=""
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 40px, (max-width: 768px) 44px, 48px"
+                sizes="192px"
                 priority
               />
             </div>
