@@ -96,20 +96,15 @@ export default function TestimonialsSection() {
       <div className="absolute top-1/4 -right-32 w-64 h-64 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden />
       {/* Overlay behind the cards */}
       <div className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,640px)] h-72 sm:h-80 rounded-3xl bg-linear-to-br from-primary/12 via-primary-light/10 to-primary-pale/20 blur-[60px] pointer-events-none" aria-hidden />
-
       <div className="relative container mx-auto container-wide z-10">
         <div className="text-center mb-5 sm:mb-8">
-          <p className="section-label text-amber-500 mb-1.5 sm:mb-2">
+          <h2 id="testimonials-heading" className="section-title text-amber-500 mb-2 sm:mb-2.5">
             What audiences say
-          </p>
-          <h2 id="testimonials-heading" className="section-title text-gray-900 mb-2 sm:mb-2.5">
-            What audiences say BIGGER
           </h2>
           <p className="section-lead text-gray-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it—hear from fans who&apos;ve experienced the magic.
           </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {TESTIMONIALS.map((member) => (
             <TestimonialCard key={member.name} {...member} />

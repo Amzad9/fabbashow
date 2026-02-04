@@ -124,12 +124,10 @@ export default function GallerySection() {
         </div>
         <div className="max-w-5xl mx-auto relative">
         <div className="text-center mb-5 sm:mb-7 md:mb-8">
-          <p className="section-label text-amber-400 mb-1.5 sm:mb-2">
-            Behind the scenes
-          </p>
-          <h3 id="gallery-heading" className="text-3xl text-white mb-2 sm:mb-2.5">
-            Gallery
-          </h3>
+        
+          <h2 id="gallery-heading" className="section-title text-amber-400 mb-2 sm:mb-2.5">
+            Behind the Scenes
+          </h2>
           <p className="section-lead text-white/70 max-w-2xl mx-auto">
             Glimpses from the stage—costumes, crowd, and the magic of live performance.
           </p>
