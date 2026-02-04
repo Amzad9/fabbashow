@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
       <div className="relative container mx-auto container-wide z-10">
         <div className="text-center mb-5 sm:mb-8">
           <h2 id="testimonials-heading" className="section-title text-amber-500 mb-2 sm:mb-2.5">
-            What audiences say
+            What Audiences Say
           </h2>
           <p className="section-lead text-gray-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it—hear from fans who&apos;ve experienced the magic.
