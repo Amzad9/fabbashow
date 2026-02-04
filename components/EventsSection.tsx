@@ -77,7 +77,7 @@ export default function EventsSection() {
     <section
       id="events"
       aria-labelledby="events-heading"
-      className="scroll-mt-20 sm:scroll-mt-24 pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-10 md:pb-12 overflow-hidden relative z-20 section-padding-x"
+      className="scroll-mt-20 sm:scroll-mt-24 pt-24 sm:pt-24 md:pt-36 pb-8 sm:pb-10 md:pb-12 overflow-hidden relative z-20 section-padding-x"
     >
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
