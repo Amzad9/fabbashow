@@ -63,7 +63,7 @@ export default function Footer() {
       <div className="absolute -bottom-24 -left-32 w-72 h-72 rounded-full bg-primary-dark/12 blur-3xl pointer-events-none" aria-hidden />
 
       <div className="relative container mx-auto section-padding-x pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-10">
-        <div className="rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-8 lg:px-10 pt-6 sm:pt-8 md:pt-10 pb-6 sm:pb-8 md:pb-12">
+        <div className="rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 border-b-0 px-4 sm:px-6 md:px-8 lg:px-10 pt-0 pb-0">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             <a
               href="/"
@@ -71,13 +71,14 @@ export default function Footer() {
               aria-label="The fABBA Show – home"
             >
               <div className="relative w-32 h-32 shrink-0">
-                <Image
-                  src={LOGO_SRC}
-                  alt=""
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 56px, (max-width: 768px) 56px, 64px"
-                />
+              <Image
+                src={LOGO_SRC}
+                alt=""
+                fill
+                className="object-contain"
+                sizes="192px"
+                priority
+              />
               </div>
            
             </a>
