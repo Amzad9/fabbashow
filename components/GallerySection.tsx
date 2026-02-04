@@ -83,7 +83,7 @@ export default function GallerySection() {
     <section
       id="gallery"
       aria-labelledby="gallery-heading"
-      className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden section-padding section-padding-x pt-20 sm:pt-24 md:pt-28"
+      className="scroll-mt-20 sm:scroll-mt-24 relative overflow-hidden section-padding section-padding-x pt-20 sm:pt-24 md:pt-34 pb-10 sm:pb-12 md:pb-16 mt-24"
     >
       <div className="absolute inset-0 bg-surface-dark" aria-hidden />
       <div className="absolute inset-0 bg-linear-to-b from-primary-dark/30 via-transparent to-primary-dark/20" aria-hidden />
@@ -98,11 +98,11 @@ export default function GallerySection() {
 
       <div className="relative container mx-auto container-wide z-10">
         {/* Top banner – styled to match gallery section */}
-        <div className="mb-5 sm:mb-6 md:mb-8">
+        <div className="mb-5 sm:mb-6 md:mb-12">
           <div className="relative h-36 sm:h-44 md:h-52 lg:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-white/[0.07] backdrop-blur-md border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <Image
-              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80"
-              alt="ABBA tribute show costumes and stage lighting"
+              src={SLIDES[0].src}
+              alt={SLIDES[0].alt}
               fill
               className="object-cover opacity-90"
               sizes="(max-width: 768px) 100vw, 1200px"
@@ -127,9 +127,9 @@ export default function GallerySection() {
           <p className="section-label text-amber-400 mb-1.5 sm:mb-2">
             Behind the scenes
           </p>
-          <h2 id="gallery-heading" className="section-title text-white mb-2 sm:mb-2.5">
+          <h3 id="gallery-heading" className="text-3xl text-white mb-2 sm:mb-2.5">
             Gallery
-          </h2>
+          </h3>
           <p className="section-lead text-white/70 max-w-2xl mx-auto">
             Glimpses from the stage—costumes, crowd, and the magic of live performance.
           </p>

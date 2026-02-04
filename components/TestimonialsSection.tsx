@@ -7,21 +7,21 @@ const TESTIMONIALS = [
     name: 'Sarah L.',
     meta: 'ABBA Fan · Long Beach, CA',
     quote: 'Best night ever! The energy was incredible and it truly felt like ABBA was back on stage. Already planning to see them again.',
-    image: 'https://i.pravatar.cc/400?img=1',
+  image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&q=80&fm=jpg&crop=faces&fit=crop&w=400&h=400',
     rating: 5,
   },
   {
     name: 'Mark D.',
     meta: 'Concert-goer · San Diego',
     quote: 'Incredible vocals and spot-on costumes. The cast had us dancing in the aisles from the first song. A must-see for any ABBA fan!',
-    image: 'https://i.pravatar.cc/400?img=3',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&q=80&fm=jpg&crop=faces&fit=crop&w=400&h=400',
     rating: 5,
   },
   {
     name: 'Emily R.',
     meta: 'First-time attendee',
     quote: "The most fun I've had in years. Even my friends who weren't ABBA fans loved it. Highly recommend—you won't regret it!",
-    image: 'https://i.pravatar.cc/400?img=5',
+  image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&q=80&fm=jpg&crop=faces&fit=crop&w=400&h=400',
     rating: 5,
   },
 ];
@@ -48,7 +48,6 @@ function TestimonialCard({ name, meta, quote, image, rating }: (typeof TESTIMONI
   return (
     <article className="group relative flex flex-col h-full rounded-xl border border-gray-100/80 bg-white/90 backdrop-blur-sm px-4 sm:px-5 py-5 sm:py-6 text-center shadow-[0_2px_12px_rgba(0,0,0,0.05),0_0_0_1px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.07),0_0_0_1px_rgba(26,97,166,0.1)] hover:border-primary/20">
       {/* Accent bar – top */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-b-full bg-linear-to-r from-amber-400 via-amber-500 to-primary" aria-hidden />
 
       <div className="relative flex flex-col items-center">
         <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden ring-2 ring-white ring-offset-1 ring-offset-primary-pale/50 shadow-md mb-3 sm:mb-4">
@@ -56,6 +55,7 @@ function TestimonialCard({ name, meta, quote, image, rating }: (typeof TESTIMONI
             src={image}
             alt={`${name}, audience member`}
             fill
+            unoptimized
             className="object-cover"
             sizes="64px"
           />
@@ -91,7 +91,7 @@ export default function TestimonialsSection() {
       />
       {/* Blue overlays – top left, middle, bottom left */}
       <div className="absolute -top-20 -left-32 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary-light/8 blur-[80px] pointer-events-none" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-100 rounded-full bg-primary-light/8 blur-[80px] pointer-events-none" aria-hidden />
       <div className="absolute -bottom-20 -left-32 w-72 h-72 rounded-full bg-primary-pale/40 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute top-1/4 -right-32 w-64 h-64 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden />
       {/* Overlay behind the cards */}
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
             What audiences say
           </p>
           <h2 id="testimonials-heading" className="section-title text-gray-900 mb-2 sm:mb-2.5">
-            Testimonials
+            What audiences say BIGGER
           </h2>
           <p className="section-lead text-gray-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it—hear from fans who&apos;ve experienced the magic.

@@ -20,7 +20,7 @@ export default function AboutPage() {
       <Nav isScrolled={isScrolled} />
       <main id="main-content" tabIndex={-1}>
         {/* Banner */}
-        <section className="relative pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 overflow-hidden">
+        <section className="relative pt-20 sm:pt-24 md:pt-36 pb-10 sm:pb-12 md:pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-surface-dark" aria-hidden />
           <div className="absolute inset-0 bg-linear-to-b from-primary-dark/40 via-transparent to-surface-dark" aria-hidden />
           <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" aria-hidden />
